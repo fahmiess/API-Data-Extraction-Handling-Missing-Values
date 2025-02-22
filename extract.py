@@ -3,8 +3,8 @@ import pandas as pd
 import os
 import streamlit as st
 
+@st.cache_data
 def fetch_data(api_url):
-    """Fetch data from an API and return as JSON"""
     response = requests.get(api_url)
     if response.status_code == 200:
         return response.json()

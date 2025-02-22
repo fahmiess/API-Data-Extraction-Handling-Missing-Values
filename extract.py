@@ -105,7 +105,7 @@ def main():
             st.write(cleaned_data.isna().sum())
         
         # Save file with user input
-        file_name = st.text_input("Enter file name (without extension):", "powerbi_data")
+        file_name = st.text_input("Enter file name (without extension):", "Data-name")
         if st.button("⬇️ Download Data"):
             csv_path = f"{file_name}.csv"
             cleaned_data.to_csv(csv_path, index=False)

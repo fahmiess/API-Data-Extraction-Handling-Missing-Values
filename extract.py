@@ -1,7 +1,8 @@
-import requests
-import pandas as pd
+# Required Libraries
+import requests #for API
+import pandas as pd #data processing
 import os
-import streamlit as st
+import streamlit as st # web application
 
 # SimpleStyling
 st.set_page_config(page_title="API Data Extractor", page_icon="📊", layout="wide")
@@ -13,24 +14,24 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-@st.cache_data
+@st.cache_data #increase performance
 def fetch_data(api_url):
     """Fetch data from an API and return as JSON"""
-    response = requests.get(api_url)
+    response = requests.get(api_url) #get data from API
     if response.status_code == 200:
-        return response.json()
+        return response.json() #most API provide JSON
     else:
         st.error(f"Error {response.status_code}: Unable to fetch data")
         return None
 
 def process_data(data):
     """Custom Data Cleaning Function"""
-    df = pd.DataFrame(data)
+    df = pd.DataFrame(data) # Convert JSON to DataFrame
     if 'id' in df.columns:
         df.rename(columns={'id': 'User ID'}, inplace=True)
     if 'name' in df.columns:
         df.rename(columns={'name': 'Full Name'}, inplace=True)
-    df.replace([None, "", "Unknown", "None"], pd.NA, inplace=True)
+    df.replace([None, "", "Unknown", "None"], pd.NA, inplace=True) #replace missing values
     return df
 
 def handle_missing_values(df):
@@ -50,7 +51,7 @@ def handle_missing_values(df):
                     
                     option = st.radio(
                         f"Choose a solution for {column}",
-                        ("Mean", "Median", "Mode", "Delete Rows"),
+                        ("Mean", "Median", "Mode", "Delete Rows"), #Suggests Mean, Median, Mode, or Delete Rows as solutions
                         key=f"missing_{column}"
                     )
                     
@@ -67,7 +68,7 @@ def handle_missing_values(df):
     
     return df
 
-def main():
+def main(): #Main Streamlit Application
     st.title("📊 API Data Extractor")
     st.write("Fetch and process data from an API.")
     

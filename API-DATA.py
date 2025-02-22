@@ -1,4 +1,3 @@
-# Required Libraries
 import requests #for API
 import pandas as pd #data processing
 import os

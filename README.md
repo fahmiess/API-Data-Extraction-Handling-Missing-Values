@@ -4,7 +4,7 @@ The API Data Extractor is a Streamlit-based web application that allows users to
 🔗 Live Demo on Streamlit: [Your Streamlit Link Here]
 API link tested: https://data.gov.my/data-catalogue
 
-# With this tool, you can:
+# Features:
 - Fetch data from an API.
 - Process and clean the data by renaming columns and handling missing values.
 - Compare before and after cleaning side-by-side.
@@ -18,8 +18,8 @@ API link tested: https://data.gov.my/data-catalogue
 - Request
 
 # Structures
-- API-DATA.py: source code with explanation
-- assets: screenshots of how the application works
+- API-DATA.py: Source code with explanation
+- assets: Screenshots of how the application works
 
 # How It Works
 

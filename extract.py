@@ -4,7 +4,7 @@ import os
 import streamlit as st
 
 # SimpleStyling
-st.set_page_config(page_title="Power BI Data Extractor", page_icon="📊", layout="wide")
+st.set_page_config(page_title="API Data Extractor", page_icon="📊", layout="wide")
 st.markdown("""
     <style>
     .big-font {font-size:20px !important;}
@@ -68,8 +68,8 @@ def handle_missing_values(df):
     return df
 
 def main():
-    st.title("📊 Power BI Data Extractor")
-    st.write("Fetch and process data from an API for Power BI analysis.")
+    st.title("📊 API Data Extractor")
+    st.write("Fetch and process data from an API.")
     
     api_url = st.text_input("API URL")
     

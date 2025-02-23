@@ -22,7 +22,8 @@ This app has been tested with the following API:
 - Request
 
 # Structures
-- API-DATA.py: Source code with explanation
+- API-DATA.py: Source code for extracting data from an API
+- Upload-data: Source code for uploading data
 - assets: Screenshots of how the application works
 
 # How It Works

@@ -36,8 +36,8 @@ This app has been tested with the following API:
 | 4️⃣ | Enter a custom file name and click "Download" to save the dataset | ![Step 4](assets/Save-file-csv.png) |
 
 # Future Enhancements  
-🔹 **Support for multiple API sources** – Allow users to input multiple API URLs and process data from different sources simultaneously.    
-🔹 **Data transformation options** – Provide users with the ability to apply transformations (e.g., filtering, sorting, aggregation).
-🔹 **Export to multiple formats** – Allow users to download data in CSV, Excel, and JSON formats.   
+- **Support for multiple API sources** – Allow users to input multiple API URLs and process data from different sources simultaneously.
+- **Data transformation options** – Provide users with the ability to apply transformations (e.g., filtering, sorting, aggregation).
+- **Export to multiple formats** – Allow users to download data in CSV, Excel, and JSON formats.   
 
 

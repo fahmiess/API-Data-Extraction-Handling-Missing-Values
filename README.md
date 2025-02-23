@@ -2,7 +2,7 @@
 The API Data Extractor is a simple Streamlit-based web application build with python that allows users to fetch, process, and clean data from an API. The application performs data cleaning, handles missing values, and provides a user-friendly interface to download the cleaned dataset.
 
 ## Live Demo  
-[Try it on Streamlit](Your_Streamlit_Link_Here)  
+[Try it on Streamlit](https://api-data-extraction.streamlit.app/)  
 
 ## API Example  
 This app has been tested with the following API:  
